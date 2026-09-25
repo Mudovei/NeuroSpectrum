@@ -1,0 +1,39 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <div class="brand">
+      <span class="brand-icon">🧠</span>
+      <h1>NeuroSpectrum</h1>
+    </div>
+    <p class="welcome">Bem-vindo ao NeuroSpectrum</p>
+
+    <form [formGroup]="form" (ngSubmit)="entrar()">
+      <div class="input-group">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <input type="email" formControlName="email" placeholder="E-mail" />
+      </div>
+
+      <div class="input-group">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <input [type]="mostrarSenha ? 'text' : 'password'" formControlName="senha" placeholder="Senha" />
+        <button type="button" class="toggle-eye" (click)="mostrarSenha = !mostrarSenha">
+          {{ mostrarSenha ? '🙈' : '👁️' }}
+        </button>
+      </div>
+
+      <a class="forgot" href="#">Esqueci minha senha</a>
+
+      <button type="submit" class="btn-primary" [disabled]="form.invalid">Entrar</button>
+
+      <button type="button" class="btn-social">
+        <span class="social-icon">G</span> Entrar com Google
+      </button>
+      <button type="button" class="btn-social">
+        <span class="social-icon"></span> Entrar com Apple
+      </button>
+
+      <p class="mensagem">{{ mensagem }}</p>
+    </form>
+
+    <p class="footer">Ainda não tem uma conta? <a href="#">Criar conta</a></p>
+  </div>
+</div>
