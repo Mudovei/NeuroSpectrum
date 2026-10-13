@@ -8,7 +8,7 @@
   <style>
 /* ================= NeuroVita — styles.css ================= */
 :root {
-  --brand: #5b21b6;
+  --brand: #213fb6;
   --brand-2: #7c3aed;
   --brand-soft: #c4b5fd;
   --dark-panel: #1f1b2e;
@@ -147,27 +147,6 @@ input, textarea, select { font: inherit; color: inherit; }
 
   <style>.hidden{display:none!important}</style>
   <script>
-/* ================ NeuroVita — app.js ================ */
-
-// 1) Toggle de senha (login)
-document.querySelectorAll('[data-toggle-password]').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const input = document.querySelector(btn.dataset.togglePassword);
-    if (!input) return;
-    const isPwd = input.type === 'password';
-    input.type = isPwd ? 'text' : 'password';
-    btn.querySelector('.eye-on')?.classList.toggle('hidden', !isPwd);
-    btn.querySelector('.eye-off')?.classList.toggle('hidden', isPwd);
-  });
-});
-
-// Envio do formulário → redireciona
-document.querySelectorAll('form[data-redirect]').forEach((form) => {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    window.location.href = form.dataset.redirect;
-  });
-});
   </script>
 </body>
 </html>
