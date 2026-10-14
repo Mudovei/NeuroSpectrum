@@ -4,7 +4,7 @@ import { EsqueciSenha } from './esqueci-senha/esqueci-senha';
 export const routes: Routes = [
     {
         path: 'esqueci-senha',
-        component: EsqueciSenha
+        component: EsqueciSenha,
     }
 
 ];
