@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { TelaLogin } from './tela-login/tela-login';
-import { EsqueciSenha } from './esqueci-senha/esqueci-senha';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [TelaLogin, EsqueciSenha],
+  imports: [RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
